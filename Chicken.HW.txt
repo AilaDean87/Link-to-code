@@ -1,0 +1,114 @@
+//Alladin m Attaharwi//
+// CSE 1310 -002
+// AMA4863
+import java.util.Scanner;
+import javafx.print.Paper;
+import static javafx.print.Paper.A1;
+public class ClassStuff2 
+{
+	public static String[] getInput(String message)
+	{
+	    Scanner in = new Scanner(System.in);
+            
+            
+           
+            
+           System.out.print(message);
+                            
+           String [] A1 = new String [3];
+           
+           for( int i =0;i < 3;i++)
+           {
+               System.out.print("\nday" +(i+1)+ ":");
+               A1[i] = in.nextLine();
+           }    
+                
+            System.out.println("");   
+            
+                   
+           
+                   
+           
+           return A1;
+            
+	}
+	 
+	 public static int totalEggs(String[] s)
+	{
+        
+           int NUM1;
+            
+              String[] S1=s[0].split("-");
+              int A2 = Integer.parseInt(S1[1]);	
+            
+              S1 = s[1].split("-");
+              int A3 = Integer.parseInt(S1[1]);
+              
+              S1 = s[2].split("-");
+              int A4 = Integer.parseInt(S1[1]);
+              
+              NUM1 = A2 + A3 + A4;
+                      
+                
+               return NUM1;
+              
+              
+              
+              
+              
+              
+             
+              
+            
+          
+            
+            
+                
+                
+                
+                
+            
+           
+                     
+                         
+	
+	 
+            }
+	 public static void main(String[] args)
+	 {
+	     String [] farmerOne = getInput("-Info for first farmer :");
+	     String [] farmerTwo = getInput("-Info for second farmer :");
+	     
+	     int numOne = totalEggs(farmerOne);
+	     int numTwo = totalEggs(farmerTwo);
+	     
+	    if(numOne<numTwo) /*farmer 2 has more*/
+	    {
+	        System.out.println("Farmer 2 has more eggs");
+	    }
+	    
+	    else if(numTwo<numOne)    //farmer 1 has more*//
+	    {
+	        System.out.println("Farmer 1 has more eggs.");
+	        
+	    }
+	    
+	    
+	    else /*same number*/
+	    {
+	        System.out.println("They have the same number of eggs.");
+	    }
+	    
+	    
+	 }
+        
+    }
+	
+	
+    	 
+        
+        
+    
+	 
+	 
+	       
